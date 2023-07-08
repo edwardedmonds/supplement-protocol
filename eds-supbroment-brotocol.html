@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ed's Supbroment Long-Brovid Brotocol</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container {
+      width: 80%;
+
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #fff;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid #fff;
+    }
+
+    th {
+      font-family: 'Roboto Mono', monospace;
+      background-color: #ff00ff;
+      color: #000;
+    }
+
+    td {
+      color: #fff;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      margin-bottom: 5px;
+    }
+
+    li::before {
+      content: '-';
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+
+  <script>
+    function getRandomColor() {
+      const colors = [
+        '#7f00ff', '#01ff01', '#fe0000', '#00f6ff', '#ff00c7', '#00ffea', '#ff8700', '#ebff00', '#00ff63', '#00b3ff',
+        '#ff00f6', '#00ff98', '#a6ff00', '#ff00a6', '#00ffdb', '#ffd800', '#00ff30', '#ff0000', '#007aff', '#ff00dc',
+        '#00ff15', '#ff6b00', '#00e0ff', '#ff0055', '#00ff84', '#ffaa00', '#c4ff00', '#ff00aa', '#00ffb4', '#ffcc00',
+        '#ff00ff', '#00ff00', '#ff0000', '#00ffff', '#ff00a2', '#00ffa2', '#ffa200', '#a200ff', '#a2ff00', '#ff00ff',
+        '#00a2ff', '#ff7700', '#00a2ff', '#ff00a2', '#a2ff00', '#00ff00', '#ff0000', '#00ffff', '#ff00a2', '#00ffa2',
+        '#ffa200', '#a200ff', '#a2ff00', '#ff00ff', '#00a2ff', '#ff7700', '#00a2ff', '#ff00a2', '#a2ff00', '#00ff00',
+        '#ff0000', '#00ffff', '#ff00a2', '#00ffa2', '#ffa200', '#a200ff', '#a2ff00', '#ff00ff', '#00a2ff', '#ff7700',
+        '#00a2ff', '#ff00a2', '#a2ff00', '#00ff00', '#ff0000', '#00ffff', '#ff00a2', '#00ffa2', '#ffa200', '#a200ff',
+        '#a2ff00', '#ff00ff', '#00a2ff', '#ff7700', '#00a2ff', '#ff00a2', '#a2ff00', '#00ff00', '#ff0000', '#00ffff',
+        '#ff00a2', '#00ffa2', '#ffa200', '#a200ff', '#a2ff00', '#ff00ff', '#00a2ff', '#ff7700', '#00a2ff', '#ff00a2',
+        '#a2ff00', '#00ff00', '#ff0000', '#00ffff', '#ff00a2', '#00ffa2', '#ffa200', '#a200ff', '#a2ff00', '#ff00ff',
+        '#00a2ff', '#ff7700', '#00a2ff', '#ff00a2', '#a2ff00', '#00ff00', '#ff0000', '#00ffff', '#ff00a2', '#00ffa2'
+      ];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function getContrastColor(color) {
+      const hexColor = color.substring(1); // Remove the leading #
+      const r = parseInt(hexColor.substr(0, 2), 16); // Extract red component
+      const g = parseInt(hexColor.substr(2, 2), 16); // Extract green component
+      const b = parseInt(hexColor.substr(4, 2), 16); // Extract blue component
+      const yiq = (r * 299 + g * 587 + b * 114) / 1000; // Calculate YIQ color value
+
+      return yiq >= 128 ? '#000' : '#fff'; // Return black or white depending on YIQ value
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+      const tableCells = document.querySelectorAll('th, td');
+      tableCells.forEach(function (cell) {
+        const backgroundColor = getRandomColor();
+        const textColor = getContrastColor(backgroundColor);
+        cell.style.backgroundColor = backgroundColor;
+        cell.style.color = textColor;
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <table>
+      <tbody>
+        <tr>
+          <th>&nbsp;</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+        <tr>
+          <td><strong>Week 1</strong></td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Thiamine 100mg</li>
+              <li>Iodine (kelp capsules) ~275mcg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Magnesium Complex 500mg</li>
+              <li>Nattokinase 2000 units</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Iodine (kelp capsules) ~275mcg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Magnesium Complex 500mg</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Niacin 500mg</li>
+              <li>Asprin 325mg</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Magnesium Complex 500mg</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Pyridoxine 50mg</li>
+              <li>Iodine (kelp capsules) ~275mcg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Vitamin E 200IU</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Week 2</strong></td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Thiamine 100mg</li>
+              <li>Iodine (kelp capsules) ~275mcg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Magnesium Complex 500mg</li>
+              <li>Nattokinase 2000 units</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Iodine (kelp capsules) ~275mcg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Magnesium Complex 500mg</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Niacin 500mg</li>
+              <li>Aspirin 325mg</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Magnesium Complex 500mg</li>
+            </ul>
+          </td>
+          <td><strong>AM</strong>
+            <ul>
+              <li>Taurine 500mg x 2</li>
+              <li>Citrulline 750mg x 2</li>
+              <li>Niacinamide 500mg</li>
+              <li>Iodine (kelp capsules) ~275mcg</li>
+              <li>Evening Primrose Oil 4g</li>
+            </ul>
+            <strong>PM</strong>
+            <ul>
+              <li>Vitamin E 200IU</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
